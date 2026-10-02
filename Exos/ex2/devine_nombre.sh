@@ -12,9 +12,8 @@
 
 
 # TODO: Valider que les paramètres sont des nombres
-if [ "$#" -ne 3 ]; then
-    echo "Erreur : Vous devez fournir exactement 3 paramètres."
-    echo "Usage: $0 <paramètre1> <paramètre2>"
+if [ "$#" -lt 2 ]; then
+    echo "Erreur : Vous devez fournir au minimum les 2 nombres"
     exit 1
 fi
 if [[ ! $1 =~ ^-?[0-9]+$ ]]; then
@@ -37,17 +36,20 @@ nombre=$(( $RANDOM % ($2 - $1 + 1) + $1 ))
 # TODO: Initialiser le nombre d'essais (5 par défaut, 3 en mode difficile)
 case "$3" in 
     facile) 
+    echo "Niveau facile"
     essais=10
     ;;
-    moyen) 
+    moyen)
+    echo "Niveau moyen"
     essais=5
     ;;
     difficile) 
+    echo "Niveau difficile"
     essais=3
     ;;
     *) 
-    echo "Choix invalide"
-    exit 1 ;
+    echo "Niveau facile par défaut"
+    essais=10
     ;;
 esac
 

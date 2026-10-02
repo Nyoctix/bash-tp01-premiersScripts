@@ -7,12 +7,12 @@
 #               - Convertit en minuscules
 #               - Ajoute un préfixe avec la date
 # Usage : ./renommer_fichiers.sh <dossier> [--dry-run]
-# Auteur : [Votre nom]
-# Date : [Date]
+# Auteur : [GAILLARD Théo]
+# Date : [2/10]
 ################################################################################
 
-# TODO: Vérifier qu'un dossier est fourni en paramètre
 
+# TODO: Vérifier qu'un dossier est fourni en paramètre
 
 # TODO: Vérifier que le dossier existe
 
@@ -20,7 +20,7 @@
 # TODO: Récupérer la date du jour au format AAAAMMJJ
 
 
-# TODO: Initialiser les compteurs
+# TODO: Initialiser les compteurs5
 
 
 # TODO: Boucler sur tous les fichiers .txt du dossier
