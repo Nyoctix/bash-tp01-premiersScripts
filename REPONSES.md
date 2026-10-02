@@ -82,31 +82,34 @@ $1
 ### Question 1 : Paramètres
 **Comment vérifier que le dossier passé en paramètre existe et est bien un répertoire ?**
 
-Votre réponse :
+Votre réponse : j'utilise if [ $# -eq 0 ]; then et if [ ! -d "$dossier" ]; then
 ```
 [Expliquez vos tests de validation]
+Je tente de mettre un fichier qui n'existe pas et y'a une erreur
 ```
 
 ### Question 2 : Sécurité
 **Que se passe-t-il si deux fichiers ont le même nom après transformation ? Comment gérer ce cas ?**
 
-Votre réponse :
+Votre réponse : De base la date réaparrait en début
 ```
-[Décrivez le problème et votre solution]
+[Décrivez le problème et votre solution] 
+je met une vérification pour savoir si il y a des chiffres en début if [[ "$nom_fichier" =~ ^[0-9]{8}[_-] ]]; then et je met que le fichier est déjà renommé si c'est le cas
 ```
 
 ### Question 3 : Extension
-**Comment pourriez-vous permettre à l'utilisateur de choisir l'extension à traiter ?**
+**Comment pourriez-vous permettre à l'utilisateur de choisir l'extension à traiter ?** 
 
-Votre réponse :
+Votre réponse : Lui demander de choisir l'extension avec un read 
 ```
 [Proposez une solution]
+Dans cette ligne "nom_sans_extension="${nom_fichier%.txt}" on remplace le ".txt" par une valeur comme "a" et avant on demande a l'utilisateur de donné a avec read
 ```
 
 ### Question 4 : Variables
 **Expliquez l'intérêt d'utiliser des variables pour stocker les compteurs.**
 
-Votre réponse :
+Votre réponse : Ca sert pour le for car vu que c'est une variable a chaque boucle si les conditions sont bonnes on ajoute +1 au compteur
 ```
 [Argumentez l'utilisation de variables]
 ```
